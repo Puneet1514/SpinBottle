@@ -30,10 +30,10 @@ public class MainActivity extends AppCompatActivity {
     void rotate(View v)
     {
         if ( !spinning ) {
-            int rand = random.nextInt() / 10000;
+            int randa = random.nextInt() / 10000;
             int pivotx = bottle.getWidth() / 2;
             int pivoty = bottle.getHeight() / 2;
-            Animation rot = new RotateAnimation(0, rand, pivotx, pivoty);
+            Animation rot = new RotateAnimation(0, randa, pivotx, pivoty);
             rot.setAnimationListener(new Animation.AnimationListener() {
                 @Override
                 public void onAnimationStart(Animation animation) {
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             });
             rot.setDuration(1000);
             rot.setFillAfter(true);
-            lastde = rand;
+            lastde = randa;
             bottle.startAnimation(rot);
         }
 
